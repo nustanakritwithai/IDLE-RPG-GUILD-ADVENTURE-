@@ -11,7 +11,7 @@ This repository currently has no game source. Commands below describe future wor
 | Windows main editor SHA-256 | `ef90e929ba1a6a4322860285d97f40f4aa349c90329a91b0e8b55b8df0f4cb00` |
 | Matching Android release template SHA-256 | `e91ef7e517e73aec1ddcc4c455c5fd53de1837c240a7c520ac438b73874b54c1` |
 | Android SDK build tools | `36.1.0` |
-| JDK | Major 17 reported by release owner; exact patch/build receipt required before Android CI |
+| JDK | Eclipse Adoptium 17.0.20.1+1, x86_64; retained JDK release metadata read in place |
 | Test package | `com.hearthvale.guildmaster.novice14.test` |
 | ABI | ARM64 only |
 
@@ -24,7 +24,7 @@ Code26's tested preset is `Android Code26 Hex Test`, unsigned, versionCode 26, v
 1. **Active now:** bootstrap path allowlist, private-path/credential screening, JSON validity, preview labels and links. No engine or signing secrets are required.
 2. **After source acceptance:** exact archive and per-file hashes, CRC/duplicate/traversal checks, public provenance, selected export resources, package/version/ABI, safe preset fields, and production/reset preservation.
 3. **Candidate Godot check:** download only the checksum-pinned standard Linux 4.6.3 editor on an isolated GitHub-hosted runner, verify its version, import resources headlessly, and reject script/parse errors. Linux execution is not yet tested for this project. The proposed workflow is inactive until accepted.
-4. **Future unsigned Android gate:** require exact JDK/SDK/template receipts and vetted unsigned test preset; check script parity/import remaps, ZIP CRC and private-content exclusion, package/version/ABI, unsigned signature state, and 16 KiB ZIP/ELF alignment. Do not add signing credentials or publish an APK automatically.
+4. **Future unsigned Android gate:** revalidate the exact JDK/SDK/template receipts against the final source handoff and vetted unsigned test preset; check script parity/import remaps, ZIP CRC and private-content exclusion, package/version/ABI, unsigned signature state, and 16 KiB ZIP/ELF alignment. Do not add signing credentials or publish an APK automatically.
 5. **Release owner:** final combined gameplay/UI/character/Guild checks and separately approved signing/delivery. Desktop or headless checks do not prove physical Android behavior.
 
 Example after an approved game import and a matching editor are available:

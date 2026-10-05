@@ -8,7 +8,10 @@
   "android_release_template_sha256": "e91ef7e517e73aec1ddcc4c455c5fd53de1837c240a7c520ac438b73874b54c1",
   "android_build_tools": "36.1.0",
   "jdk_major": 17,
-  "jdk_exact_build": null,
+  "jdk_exact_build": "17.0.20.1+1",
+  "jdk_implementor": "Eclipse Adoptium",
+  "jdk_architecture": "x86_64",
+  "jdk_identity_source": "retained JDK release metadata; no Java invocation by adoption agent",
   "android_ci_ready": false,
   "code27_final_toolchain_receipt": null,
   "linux_editor_candidate": {
