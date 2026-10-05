@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Idle RPG Guild Adventure: release status, source adoption and build documentation.">
+  <title>Idle RPG Guild Adventure — Release status</title>
+  <style>
+    :root { color-scheme: dark; --ink:#f2f0e6; --muted:#adbbb4; --bg:#101b18; --card:#1a2a24; --line:#344a40; --gold:#e4c787; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 system-ui,sans-serif; }
+    .wrap { max-width:1100px; margin:auto; padding:32px 26px; }
+    header { display:flex; justify-content:space-between; gap:24px; align-items:center; border-bottom:1px solid var(--line); padding-bottom:22px; }
+    .brand { font-size:15px; font-weight:750; letter-spacing:.035em; }
+    a { color:var(--gold); text-underline-offset:4px; }
+    a:focus-visible { outline:3px solid var(--gold); outline-offset:5px; }
+    header a { font-size:14px; }
+    .eyebrow { color:var(--gold); text-transform:uppercase; font-size:12px; letter-spacing:.18em; font-weight:750; margin:0 0 22px; }
+    .hero { padding:74px 0 54px; display:grid; grid-template-columns:1.45fr 1fr; gap:50px; }
+    h1 { font:600 clamp(38px,5vw,64px)/1.08 Georgia,serif; margin:0 0 25px; max-width:700px; letter-spacing:-.035em; }
+    .lead { color:var(--muted); font-size:18px; max-width:580px; }
+    .badge { display:inline-block; border:1px solid #6b6040; border-radius:99px; padding:5px 13px; color:var(--gold); font-size:12px; margin-bottom:20px; }
+    .next { background:var(--card); border:1px solid var(--line); padding:30px; align-self:center; border-radius:12px; }
+    .next h2 { font-size:32px; margin:0 0 5px; }
+    .next p { color:var(--muted); margin:12px 0 0; }
+    .next small { display:block; color:var(--muted); margin-top:10px; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; padding:0 0 48px; }
+    article { border:1px solid var(--line); border-radius:10px; padding:24px; }
+    article .label { font-size:11px; letter-spacing:.13em; text-transform:uppercase; color:var(--muted); }
+    article h2 { font-size:21px; margin:15px 0 12px; }
+    article p { margin:0; color:var(--muted); font-size:14px; }
+    .docs { border-top:1px solid var(--line); padding:30px 0; display:flex; gap:40px; align-items:baseline; }
+    .docs h2 { font-size:18px; margin:0; min-width:130px; }
+    .links { display:flex; flex-wrap:wrap; gap:14px 25px; font-size:14px; }
+    footer { color:#879990; border-top:1px solid var(--line); padding:22px 0; font-size:12px; }
+    @media(max-width:760px) { .hero { grid-template-columns:1fr; gap:24px; padding-top:45px; } .cards { grid-template-columns:1fr; } .docs { display:block; } .docs h2 { margin-bottom:18px; } header { align-items:flex-start; } .next { padding:24px; } }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header><span class="brand">IDLE RPG · GUILD ADVENTURE</span><a href="https://github.com/nustanakritwithai/IDLE-RPG-GUILD-ADVENTURE-">View repository ↗</a></header>
+  <main>
+    <section class="hero" aria-labelledby="title">
+      <div><p class="eyebrow">Project status preview</p><h1>A guild starts<br>with one adventurer.</h1><p class="lead">A Godot Android game about earned adventures, growing a guild and choosing professions. Follow the source adoption and release preparation here.</p><p class="lead">This page shares release status and documentation. A playable browser build is still pending compatibility review.</p></div>
+      <aside class="next" aria-label="Next release status"><span class="badge">Pending final handoff</span><h2>Code27</h2><strong>Planned version 0.14.13</strong><p>Guild routing, character equipment and final combined checks are being closed by the release owner.</p><p>A tested final release has not been imported or published here.</p><small>Next gate: immutable source and final validation</small></aside>
+    </section>
+    <section class="cards" aria-label="Verified project facts">
+      <article><span class="label">Archive baseline</span><h2>code26 verified</h2><p>635 files checked against the immutable archive manifest. The archive identity is verified; game source and APK downloads are not included in this bootstrap.</p></article>
+      <article><span class="label">Build foundation</span><h2>Godot 4.6.3</h2><p>The standard GDScript editor and matching Android template are recorded. Source checks run in CI; Android export and signing remain separate release gates.</p></article>
+      <article><span class="label">Public repository</span><h2>Clean source adoption</h2><p>Asset provenance and notices are reviewed before import. Signing material, real saves, profiles, toolchains and private evidence stay outside Git.</p></article>
+    </section>
+    <section class="docs" aria-label="Project documentation"><h2>Read the plan</h2><div class="links"><a href="https://github.com/nustanakritwithai/IDLE-RPG-GUILD-ADVENTURE-/blob/main/docs/ADOPTION.md">Adoption</a><a href="https://github.com/nustanakritwithai/IDLE-RPG-GUILD-ADVENTURE-/blob/main/docs/BUILD.md">Build guide</a><a href="https://github.com/nustanakritwithai/IDLE-RPG-GUILD-ADVENTURE-/blob/main/docs/ASSET_PROVENANCE.md">Asset provenance</a><a href="status.json">Status data</a></div></section>
+  </main>
+  <footer>Reviewed 5 October 2026 · Static status preview · Physical Android and browser gameplay validation are not claimed.</footer>
+</div>
+</body>
+</html>

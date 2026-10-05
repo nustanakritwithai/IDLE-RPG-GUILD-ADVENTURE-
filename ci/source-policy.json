@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "mode": "docs-status-bootstrap",
+  "allow": [
+    ".gitignore", ".gitattributes", "README.md",
+    "docs/ADOPTION.md", "docs/BUILD.md", "docs/SOURCE_POLICY.md",
+    "docs/ASSET_PROVENANCE.md", "docs/PAGES.md",
+    "ci/source-policy.json", "ci/toolchain.json",
+    "scripts/check_source.py",
+    ".github/workflows/bootstrap.yml",
+    ".github/workflows/godot-source.yml.proposed",
+    "site/index.html", "site/status.json", "site/.nojekyll"
+  ],
+  "max_total_bytes": 5242880,
+  "max_file_bytes": 262144,
+  "game_import_allowed": false,
+  "required_status": {"code26": "verified_archive_only", "code27": "pending_final_handoff", "playable_web": false}
+}

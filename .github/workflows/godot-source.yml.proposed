@@ -1,0 +1,39 @@
+# INACTIVE proposal. Accept a frozen game import, its CI allowlist and exact
+# toolchain/harness receipt before renaming to .yml in a reviewed draft PR.
+name: Proposed Godot 4.6.3 source import check
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  import:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Require an accepted immutable import receipt
+        run: |
+          test -f game/project.godot
+          test -f ci/accepted-source-manifest.json
+          # Add the approved per-file SHA/preset/provenance guard before activation.
+          echo 'Proposal needs approved import verification and harnesses.'
+          exit 1
+      - name: Fetch checksum-pinned standard editor
+        env:
+          GODOT_ARCHIVE_SHA256: d0bc2113065e481c9c2c2b2c37daa4e8be3fe9e27f0ab9ab0b6096e9a37907f3
+        run: |
+          curl --fail --location --retry 2 --output "$RUNNER_TEMP/godot.zip" https://github.com/godotengine/godot/releases/download/4.6.3-stable/Godot_v4.6.3-stable_linux.x86_64.zip
+          echo "$GODOT_ARCHIVE_SHA256  $RUNNER_TEMP/godot.zip" | sha256sum --check --strict
+          unzip -q "$RUNNER_TEMP/godot.zip" -d "$RUNNER_TEMP/godot"
+          chmod +x "$RUNNER_TEMP/godot/Godot_v4.6.3-stable_linux.x86_64"
+      - name: Verify exact version and import
+        run: |
+          engine="$RUNNER_TEMP/godot/Godot_v4.6.3-stable_linux.x86_64"
+          test "$("$engine" --version)" = '4.6.3.stable.official.7d41c59c4'
+          "$engine" --headless --path game --import > "$RUNNER_TEMP/import.log" 2>&1
+          cat "$RUNNER_TEMP/import.log"
+          if grep -Ei 'SCRIPT ERROR|Parse Error|ERROR:' "$RUNNER_TEMP/import.log"; then exit 1; fi
+          # Append only the accepted handoff's isolated harnesses.
+          # Android export, signing and publishing are separate future gates.

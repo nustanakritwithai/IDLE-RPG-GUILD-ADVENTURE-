@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "baseline": "code26",
+  "godot_version": "4.6.3.stable.official.7d41c59c4",
+  "standard_gdscript_editor": true,
+  "windows_console_sha256": "63b3b2208819714c9677fbfdd8217c5b7dee8ecf5f383502e826bc9e2227ff5a",
+  "windows_main_sha256": "ef90e929ba1a6a4322860285d97f40f4aa349c90329a91b0e8b55b8df0f4cb00",
+  "android_release_template_sha256": "e91ef7e517e73aec1ddcc4c455c5fd53de1837c240a7c520ac438b73874b54c1",
+  "android_build_tools": "36.1.0",
+  "jdk_major": 17,
+  "jdk_exact_build": null,
+  "android_ci_ready": false,
+  "code27_final_toolchain_receipt": null,
+  "linux_editor_candidate": {
+    "url": "https://github.com/godotengine/godot/releases/download/4.6.3-stable/Godot_v4.6.3-stable_linux.x86_64.zip",
+    "archive_bytes": 71806687,
+    "archive_sha256": "d0bc2113065e481c9c2c2b2c37daa4e8be3fe9e27f0ab9ab0b6096e9a37907f3",
+    "project_execution_verified": false
+  }
+}

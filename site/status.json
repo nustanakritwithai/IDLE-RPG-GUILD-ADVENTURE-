@@ -1,0 +1,15 @@
+{
+  "project": "Idle RPG Guild Adventure",
+  "preview_kind": "documentation_and_release_status",
+  "reviewed_utc": "2026-10-05T21:08:41Z",
+  "code26": "verified_archive_only",
+  "code26_archive_sha256": "f605df9ec54493355e63a654840451b7e42ca58505da15ff36b8b5059ec73962",
+  "code26_archive_bytes": 78398970,
+  "code26_source_files": 635,
+  "code27": "pending_final_handoff",
+  "planned_code27_version": "0.14.13",
+  "godot_version": "4.6.3.stable.official.7d41c59c4",
+  "playable_web": false,
+  "game_source_imported": false,
+  "apk_published": false
+}
